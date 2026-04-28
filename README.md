@@ -48,8 +48,8 @@ Python · Pandas · Matplotlib · Seaborn · Folium · Jupyter Notebook
 - PARES — Portal de Archivos Españoles *(próximas fases)*
 
 ## 👩‍💻 Autora
-[Tu nombre] · Archivera y analista de datos  
-[Tu LinkedIn] · [Tu email]
+Marisa Lozano · Archivera y analista de datos  
+https://www.linkedin.com/in/marisa-lozano-arroyo-2a8a2072/ · marisalozan@gmail.com
 
 ---
 *Este proyecto nace de la convicción de que los datos pueden ser 
