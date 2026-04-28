@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5b1c0f67ab20ee96f797ea55ec1fa227 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+     z-index: 1000; background-color: white; padding: 10px 20px;
+     border-radius: 8px; border: 2px solid #d73027;
+     font-family: Arial; font-size: 14px; font-weight: bold; text-align: center;">
+     🗺️ Rastros del 36 · Víctimas por provincia de fallecimiento<br>
+     <span style="font-size:11px; font-weight:normal;">
+     Guerra Civil — Euskadi | Fuente: Open Data Euskadi</span>
+</div>
+    
+            <div class="folium-map" id="map_5b1c0f67ab20ee96f797ea55ec1fa227" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5b1c0f67ab20ee96f797ea55ec1fa227 = L.map(
+                "map_5b1c0f67ab20ee96f797ea55ec1fa227",
+                {
+                    center: [42.5, -2.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4e99c445f3da6cf6fb7e047c77b80416 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4e99c445f3da6cf6fb7e047c77b80416.addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+            var circle_marker_8fdcef7df42a0a82f0e03775b3086056 = L.circleMarker(
+                [43.263, -2.935],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.526004288332103, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_e6af99f5f6285d2999697e4b213f1ffb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_196e3cbeaf5461d4940e99e2f74608c5 = $(`<div id="html_196e3cbeaf5461d4940e99e2f74608c5" style="width: 100.0%; height: 100.0%;"><b>Bizkaia</b><br>Víctimas: 9,655</div>`)[0];
+                popup_e6af99f5f6285d2999697e4b213f1ffb.setContent(html_196e3cbeaf5461d4940e99e2f74608c5);
+            
+        
+
+        circle_marker_8fdcef7df42a0a82f0e03775b3086056.bindPopup(popup_e6af99f5f6285d2999697e4b213f1ffb)
+        ;
+
+        
+    
+    
+            circle_marker_8fdcef7df42a0a82f0e03775b3086056.bindTooltip(
+                `<div>
+                     Bizkaia: 9,655 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_49f6ae59caa1d4ad7653e7046aee51fb = L.circleMarker(
+                [43.3128, -1.9754],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.248133402712742, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_07c41a9fc1e80a97e826ed5167be9a04 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1d29e976861ea6815adeb339dd7a6798 = $(`<div id="html_1d29e976861ea6815adeb339dd7a6798" style="width: 100.0%; height: 100.0%;"><b>Gipuzkoa</b><br>Víctimas: 3,237</div>`)[0];
+                popup_07c41a9fc1e80a97e826ed5167be9a04.setContent(html_1d29e976861ea6815adeb339dd7a6798);
+            
+        
+
+        circle_marker_49f6ae59caa1d4ad7653e7046aee51fb.bindPopup(popup_07c41a9fc1e80a97e826ed5167be9a04)
+        ;
+
+        
+    
+    
+            circle_marker_49f6ae59caa1d4ad7653e7046aee51fb.bindTooltip(
+                `<div>
+                     Gipuzkoa: 3,237 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99ca4b8995b53e54012f16761ebf4071 = L.circleMarker(
+                [42.8469, -2.6727],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.16271575581034, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_242d5e044b03381551d3882f66213bdc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ada8c6338891ec9f4a193fd568a2a9e9 = $(`<div id="html_ada8c6338891ec9f4a193fd568a2a9e9" style="width: 100.0%; height: 100.0%;"><b>Araba/Álava</b><br>Víctimas: 2,254</div>`)[0];
+                popup_242d5e044b03381551d3882f66213bdc.setContent(html_ada8c6338891ec9f4a193fd568a2a9e9);
+            
+        
+
+        circle_marker_99ca4b8995b53e54012f16761ebf4071.bindPopup(popup_242d5e044b03381551d3882f66213bdc)
+        ;
+
+        
+    
+    
+            circle_marker_99ca4b8995b53e54012f16761ebf4071.bindTooltip(
+                `<div>
+                     Araba/Álava: 2,254 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2495bef47717778fce6f54e174e3d2e3 = L.circleMarker(
+                [43.3614, -5.8593],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.50837013774687, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_b449afc8ef18dc46d6cd24ef3cc38fc9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_72820e88c56afd94bc4e1bd9623f81a3 = $(`<div id="html_72820e88c56afd94bc4e1bd9623f81a3" style="width: 100.0%; height: 100.0%;"><b>Asturias</b><br>Víctimas: 666</div>`)[0];
+                popup_b449afc8ef18dc46d6cd24ef3cc38fc9.setContent(html_72820e88c56afd94bc4e1bd9623f81a3);
+            
+        
+
+        circle_marker_2495bef47717778fce6f54e174e3d2e3.bindPopup(popup_b449afc8ef18dc46d6cd24ef3cc38fc9)
+        ;
+
+        
+    
+    
+            circle_marker_2495bef47717778fce6f54e174e3d2e3.bindTooltip(
+                `<div>
+                     Asturias: 666 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_848e230fa86c3f42870e16801da15484 = L.circleMarker(
+                [43.1828, -3.9878],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.24037687150207, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_841a949cfebbb4ccb48625bc078de4f8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6afb4cde5bb60a1684ec10de389f3eee = $(`<div id="html_6afb4cde5bb60a1684ec10de389f3eee" style="width: 100.0%; height: 100.0%;"><b>Cantabria</b><br>Víctimas: 609</div>`)[0];
+                popup_841a949cfebbb4ccb48625bc078de4f8.setContent(html_6afb4cde5bb60a1684ec10de389f3eee);
+            
+        
+
+        circle_marker_848e230fa86c3f42870e16801da15484.bindPopup(popup_841a949cfebbb4ccb48625bc078de4f8)
+        ;
+
+        
+    
+    
+            circle_marker_848e230fa86c3f42870e16801da15484.bindTooltip(
+                `<div>
+                     Cantabria: 609 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_315b8bcef72d6ec5bb99feb5841a290b = L.circleMarker(
+                [40.3456, -1.1065],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.170352039685874, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_1ffed4910d657d96c3c57eb5493c484b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a5dbfacead33cc428cee5680f4ac5655 = $(`<div id="html_a5dbfacead33cc428cee5680f4ac5655" style="width: 100.0%; height: 100.0%;"><b>Teruel</b><br>Víctimas: 426</div>`)[0];
+                popup_1ffed4910d657d96c3c57eb5493c484b.setContent(html_a5dbfacead33cc428cee5680f4ac5655);
+            
+        
+
+        circle_marker_315b8bcef72d6ec5bb99feb5841a290b.bindPopup(popup_1ffed4910d657d96c3c57eb5493c484b)
+        ;
+
+        
+    
+    
+            circle_marker_315b8bcef72d6ec5bb99feb5841a290b.bindTooltip(
+                `<div>
+                     Teruel: 426 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_570542cd1c4a2bdffb94775acc120c30 = L.circleMarker(
+                [40.4168, -3.7038],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.121330794246624, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_7f36dd50a71b3192a81ace52c744774d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f9f55d0c836587d5d20965500cceead1 = $(`<div id="html_f9f55d0c836587d5d20965500cceead1" style="width: 100.0%; height: 100.0%;"><b>Madrid</b><br>Víctimas: 300</div>`)[0];
+                popup_7f36dd50a71b3192a81ace52c744774d.setContent(html_f9f55d0c836587d5d20965500cceead1);
+            
+        
+
+        circle_marker_570542cd1c4a2bdffb94775acc120c30.bindPopup(popup_7f36dd50a71b3192a81ace52c744774d)
+        ;
+
+        
+    
+    
+            circle_marker_570542cd1c4a2bdffb94775acc120c30.bindTooltip(
+                `<div>
+                     Madrid: 300 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d87276baa99104ae0a5a1f8703883ff8 = L.circleMarker(
+                [41.6176, 0.62],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.552358689394122, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_ff28f36d9ff9bc4af681d6eaea0c8c4f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_38b98d6ca3e04ccdfd5b00c12404310d = $(`<div id="html_38b98d6ca3e04ccdfd5b00c12404310d" style="width: 100.0%; height: 100.0%;"><b>Lleida</b><br>Víctimas: 248</div>`)[0];
+                popup_ff28f36d9ff9bc4af681d6eaea0c8c4f.setContent(html_38b98d6ca3e04ccdfd5b00c12404310d);
+            
+        
+
+        circle_marker_d87276baa99104ae0a5a1f8703883ff8.bindPopup(popup_ff28f36d9ff9bc4af681d6eaea0c8c4f)
+        ;
+
+        
+    
+    
+            circle_marker_d87276baa99104ae0a5a1f8703883ff8.bindTooltip(
+                `<div>
+                     Lleida: 248 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3889d89bcdae98c18e9535d5da75ad79 = L.circleMarker(
+                [41.1189, 1.2445],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.709325888489847, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_d42a1471ced434dcc0d6ebeb241872b0 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5f5047257128d54edc811294d46ff059 = $(`<div id="html_5f5047257128d54edc811294d46ff059" style="width: 100.0%; height: 100.0%;"><b>Tarragona</b><br>Víctimas: 187</div>`)[0];
+                popup_d42a1471ced434dcc0d6ebeb241872b0.setContent(html_5f5047257128d54edc811294d46ff059);
+            
+        
+
+        circle_marker_3889d89bcdae98c18e9535d5da75ad79.bindPopup(popup_d42a1471ced434dcc0d6ebeb241872b0)
+        ;
+
+        
+    
+    
+            circle_marker_3889d89bcdae98c18e9535d5da75ad79.bindTooltip(
+                `<div>
+                     Tarragona: 187 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_609f94965845eb887e82b46cbb4a2a1c = L.circleMarker(
+                [42.6954, -1.6761],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.69332585056376, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_70ff7f0a0d11baf2784d8d54cc650283 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3bd332d2716b289dffcac8f4c7898e41 = $(`<div id="html_3bd332d2716b289dffcac8f4c7898e41" style="width: 100.0%; height: 100.0%;"><b>Navarra</b><br>Víctimas: 186</div>`)[0];
+                popup_70ff7f0a0d11baf2784d8d54cc650283.setContent(html_3bd332d2716b289dffcac8f4c7898e41);
+            
+        
+
+        circle_marker_609f94965845eb887e82b46cbb4a2a1c.bindPopup(popup_70ff7f0a0d11baf2784d8d54cc650283)
+        ;
+
+        
+    
+    
+            circle_marker_609f94965845eb887e82b46cbb4a2a1c.bindTooltip(
+                `<div>
+                     Navarra: 186 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13924377249e0e29d17d5e15493deecc = L.circleMarker(
+                [42.344, -3.6969],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.562157417522265, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_19ac6d93ec04a93d7fc281a1284159fc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7831514730d1fb937e9f4c16668933ee = $(`<div id="html_7831514730d1fb937e9f4c16668933ee" style="width: 100.0%; height: 100.0%;"><b>Burgos</b><br>Víctimas: 178</div>`)[0];
+                popup_19ac6d93ec04a93d7fc281a1284159fc.setContent(html_7831514730d1fb937e9f4c16668933ee);
+            
+        
+
+        circle_marker_13924377249e0e29d17d5e15493deecc.bindPopup(popup_19ac6d93ec04a93d7fc281a1284159fc)
+        ;
+
+        
+    
+    
+            circle_marker_13924377249e0e29d17d5e15493deecc.bindTooltip(
+                `<div>
+                     Burgos: 178 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b36ef4d8821de09d8728a1bcda9e42d2 = L.circleMarker(
+                [39.9864, -0.0513],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.42499066950798, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_af536e7523980ccdada26ee54b90915f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d8a7f2e5111d0f8782748a58d8ee58ad = $(`<div id="html_d8a7f2e5111d0f8782748a58d8ee58ad" style="width: 100.0%; height: 100.0%;"><b>Castellón/Castelló</b><br>Víctimas: 170</div>`)[0];
+                popup_af536e7523980ccdada26ee54b90915f.setContent(html_d8a7f2e5111d0f8782748a58d8ee58ad);
+            
+        
+
+        circle_marker_b36ef4d8821de09d8728a1bcda9e42d2.bindPopup(popup_af536e7523980ccdada26ee54b90915f)
+        ;
+
+        
+    
+    
+            circle_marker_b36ef4d8821de09d8728a1bcda9e42d2.bindTooltip(
+                `<div>
+                     Castellón/Castelló: 170 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9c386e5f026f0bc2474907561eb8ed0 = L.circleMarker(
+                [41.6561, -0.8773],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.262789005697151, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_0868b788c6720e69b426f7accf6b4394 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_77cd9931598b5b6908dac7fa742b9f2b = $(`<div id="html_77cd9931598b5b6908dac7fa742b9f2b" style="width: 100.0%; height: 100.0%;"><b>Zaragoza</b><br>Víctimas: 161</div>`)[0];
+                popup_0868b788c6720e69b426f7accf6b4394.setContent(html_77cd9931598b5b6908dac7fa742b9f2b);
+            
+        
+
+        circle_marker_b9c386e5f026f0bc2474907561eb8ed0.bindPopup(popup_0868b788c6720e69b426f7accf6b4394)
+        ;
+
+        
+    
+    
+            circle_marker_b9c386e5f026f0bc2474907561eb8ed0.bindTooltip(
+                `<div>
+                     Zaragoza: 161 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6b8c5afdbaa4dbabf6e14f9f15bd527 = L.circleMarker(
+                [41.3851, 2.1734],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.71582433531529, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_7033cd01fa248b655693450286a7434b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7adbf08cc902548d2caa671b3c58bc32 = $(`<div id="html_7adbf08cc902548d2caa671b3c58bc32" style="width: 100.0%; height: 100.0%;"><b>Barcelona</b><br>Víctimas: 134</div>`)[0];
+                popup_7033cd01fa248b655693450286a7434b.setContent(html_7adbf08cc902548d2caa671b3c58bc32);
+            
+        
+
+        circle_marker_a6b8c5afdbaa4dbabf6e14f9f15bd527.bindPopup(popup_7033cd01fa248b655693450286a7434b)
+        ;
+
+        
+    
+    
+            circle_marker_a6b8c5afdbaa4dbabf6e14f9f15bd527.bindTooltip(
+                `<div>
+                     Barcelona: 134 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1e2d2325c5b6f03cdb33208f9d961c69 = L.circleMarker(
+                [42.1401, -0.4089],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.2830336866663, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_3e000bab9de4464a1f3444c5ea104064 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8c919b3fa476e425c298bb1ea4699d02 = $(`<div id="html_8c919b3fa476e425c298bb1ea4699d02" style="width: 100.0%; height: 100.0%;"><b>Huesca</b><br>Víctimas: 59</div>`)[0];
+                popup_3e000bab9de4464a1f3444c5ea104064.setContent(html_8c919b3fa476e425c298bb1ea4699d02);
+            
+        
+
+        circle_marker_1e2d2325c5b6f03cdb33208f9d961c69.bindPopup(popup_3e000bab9de4464a1f3444c5ea104064)
+        ;
+
+        
+    
+    
+            circle_marker_1e2d2325c5b6f03cdb33208f9d961c69.bindTooltip(
+                `<div>
+                     Huesca: 59 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_488e429bfed6ba0c370e31de3bb91892 = L.circleMarker(
+                [37.3891, -5.9845],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.2830336866663, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_7142685b12813b4eaf13d5450c6bca8f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a40d7798754d7ca1da7d79decbbd3d9b = $(`<div id="html_a40d7798754d7ca1da7d79decbbd3d9b" style="width: 100.0%; height: 100.0%;"><b>Sevilla</b><br>Víctimas: 59</div>`)[0];
+                popup_7142685b12813b4eaf13d5450c6bca8f.setContent(html_a40d7798754d7ca1da7d79decbbd3d9b);
+            
+        
+
+        circle_marker_488e429bfed6ba0c370e31de3bb91892.bindPopup(popup_7142685b12813b4eaf13d5450c6bca8f)
+        ;
+
+        
+    
+    
+            circle_marker_488e429bfed6ba0c370e31de3bb91892.bindTooltip(
+                `<div>
+                     Sevilla: 59 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_70746855992d4cdea0cef344e9123bf3 = L.circleMarker(
+                [42.5987, -5.5671],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.129153803503652, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_93d69dbb4e29f57b9b417416f9d2e170 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_75a2802985f0648718e33efb4a718196 = $(`<div id="html_75a2802985f0648718e33efb4a718196" style="width: 100.0%; height: 100.0%;"><b>León</b><br>Víctimas: 56</div>`)[0];
+                popup_93d69dbb4e29f57b9b417416f9d2e170.setContent(html_75a2802985f0648718e33efb4a718196);
+            
+        
+
+        circle_marker_70746855992d4cdea0cef344e9123bf3.bindPopup(popup_93d69dbb4e29f57b9b417416f9d2e170)
+        ;
+
+        
+    
+    
+            circle_marker_70746855992d4cdea0cef344e9123bf3.bindTooltip(
+                `<div>
+                     León: 56 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71bb7d1109a81d023be4444e28980612 = L.circleMarker(
+                [42.2871, -2.5396],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.966952139692824, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_032b37f6f8703933b6212914087e2f34 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_dbc95afb76c747c778fa255399fa6d07 = $(`<div id="html_dbc95afb76c747c778fa255399fa6d07" style="width: 100.0%; height: 100.0%;"><b>Rioja (La)</b><br>Víctimas: 53</div>`)[0];
+                popup_032b37f6f8703933b6212914087e2f34.setContent(html_dbc95afb76c747c778fa255399fa6d07);
+            
+        
+
+        circle_marker_71bb7d1109a81d023be4444e28980612.bindPopup(popup_032b37f6f8703933b6212914087e2f34)
+        ;
+
+        
+    
+    
+            circle_marker_71bb7d1109a81d023be4444e28980612.bindTooltip(
+                `<div>
+                     Rioja (La): 53 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cbe35b46d13a7522942338ba1ac9404e = L.circleMarker(
+                [40.633, -3.1669],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.140716200112923, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_94b45c0d0333fb24426027b05b9c3f77 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0f8186127462ddb0f85f4c0b5b38c3ef = $(`<div id="html_0f8186127462ddb0f85f4c0b5b38c3ef" style="width: 100.0%; height: 100.0%;"><b>Guadalajara</b><br>Víctimas: 40</div>`)[0];
+                popup_94b45c0d0333fb24426027b05b9c3f77.setContent(html_0f8186127462ddb0f85f4c0b5b38c3ef);
+            
+        
+
+        circle_marker_cbe35b46d13a7522942338ba1ac9404e.bindPopup(popup_94b45c0d0333fb24426027b05b9c3f77)
+        ;
+
+        
+    
+    
+            circle_marker_cbe35b46d13a7522942338ba1ac9404e.bindTooltip(
+                `<div>
+                     Guadalajara: 40 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_860525ca886013168e726260d427283b = L.circleMarker(
+                [38.8794, -6.9706],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.990684938388938, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_5dfe947078e6a229130c796a5c69ae1f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b905da35973eac8cfcee6d0a89e8812b = $(`<div id="html_b905da35973eac8cfcee6d0a89e8812b" style="width: 100.0%; height: 100.0%;"><b>Badajoz</b><br>Víctimas: 38</div>`)[0];
+                popup_5dfe947078e6a229130c796a5c69ae1f.setContent(html_b905da35973eac8cfcee6d0a89e8812b);
+            
+        
+
+        circle_marker_860525ca886013168e726260d427283b.bindPopup(popup_5dfe947078e6a229130c796a5c69ae1f)
+        ;
+
+        
+    
+    
+            circle_marker_860525ca886013168e726260d427283b.bindTooltip(
+                `<div>
+                     Badajoz: 38 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b77fdf1069341ec91a155dfa286b459 = L.circleMarker(
+                [36.5271, -6.2886],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.489522684399441, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_f82d2b7741eedf32f7eb16ea37c62d4f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c04e8721056f0de679dc95f839fd4cf2 = $(`<div id="html_c04e8721056f0de679dc95f839fd4cf2" style="width: 100.0%; height: 100.0%;"><b>Cádiz</b><br>Víctimas: 32</div>`)[0];
+                popup_f82d2b7741eedf32f7eb16ea37c62d4f.setContent(html_c04e8721056f0de679dc95f839fd4cf2);
+            
+        
+
+        circle_marker_6b77fdf1069341ec91a155dfa286b459.bindPopup(popup_f82d2b7741eedf32f7eb16ea37c62d4f)
+        ;
+
+        
+    
+    
+            circle_marker_6b77fdf1069341ec91a155dfa286b459.bindTooltip(
+                `<div>
+                     Cádiz: 32 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfee84f937a1a13e38b8b1d44e5be7af = L.circleMarker(
+                [39.8628, -4.0273],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.887510598012987, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_c7a3e4dba835dc8191eac8ef51968489 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c75a2aee43d9df66a3860e90d1746cf0 = $(`<div id="html_c75a2aee43d9df66a3860e90d1746cf0" style="width: 100.0%; height: 100.0%;"><b>Toledo</b><br>Víctimas: 26</div>`)[0];
+                popup_c7a3e4dba835dc8191eac8ef51968489.setContent(html_c75a2aee43d9df66a3860e90d1746cf0);
+            
+        
+
+        circle_marker_dfee84f937a1a13e38b8b1d44e5be7af.bindPopup(popup_c7a3e4dba835dc8191eac8ef51968489)
+        ;
+
+        
+    
+    
+            circle_marker_dfee84f937a1a13e38b8b1d44e5be7af.bindTooltip(
+                `<div>
+                     Toledo: 26 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_03a771bc211561292e80d7387f16629e = L.circleMarker(
+                [39.4699, -0.3763],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.774289614064447, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_053ec0a924eed9193c99454a5db4b18e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e6225a6db58310f31f48e2762a87f957 = $(`<div id="html_e6225a6db58310f31f48e2762a87f957" style="width: 100.0%; height: 100.0%;"><b>Valencia/València</b><br>Víctimas: 25</div>`)[0];
+                popup_053ec0a924eed9193c99454a5db4b18e.setContent(html_e6225a6db58310f31f48e2762a87f957);
+            
+        
+
+        circle_marker_03a771bc211561292e80d7387f16629e.bindPopup(popup_053ec0a924eed9193c99454a5db4b18e)
+        ;
+
+        
+    
+    
+            circle_marker_03a771bc211561292e80d7387f16629e.bindTooltip(
+                `<div>
+                     Valencia/València: 25 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78eba938161c571adda9959643cf3cb2 = L.circleMarker(
+                [39.4752, -6.3724],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.406482647787449, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_89d688d94788b21de89ff039f9384e01 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c6f6540998f3cf147f2a82e9415e805c = $(`<div id="html_c6f6540998f3cf147f2a82e9415e805c" style="width: 100.0%; height: 100.0%;"><b>Cáceres</b><br>Víctimas: 22</div>`)[0];
+                popup_89d688d94788b21de89ff039f9384e01.setContent(html_c6f6540998f3cf147f2a82e9415e805c);
+            
+        
+
+        circle_marker_78eba938161c571adda9959643cf3cb2.bindPopup(popup_89d688d94788b21de89ff039f9384e01)
+        ;
+
+        
+    
+    
+            circle_marker_78eba938161c571adda9959643cf3cb2.bindTooltip(
+                `<div>
+                     Cáceres: 22 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a4cc4bc924eae73500a80e5e7d37103c = L.circleMarker(
+                [40.9429, -4.1088],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.987196820661973, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_a2b636f8e841ea34179f0dbc99b6cac7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_703769bdbbb3cad94dd6a3ba71e30e3b = $(`<div id="html_703769bdbbb3cad94dd6a3ba71e30e3b" style="width: 100.0%; height: 100.0%;"><b>Segovia</b><br>Víctimas: 19</div>`)[0];
+                popup_a2b636f8e841ea34179f0dbc99b6cac7.setContent(html_703769bdbbb3cad94dd6a3ba71e30e3b);
+            
+        
+
+        circle_marker_a4cc4bc924eae73500a80e5e7d37103c.bindPopup(popup_a2b636f8e841ea34179f0dbc99b6cac7)
+        ;
+
+        
+    
+    
+            circle_marker_a4cc4bc924eae73500a80e5e7d37103c.bindTooltip(
+                `<div>
+                     Segovia: 19 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_addf1168aaa0a974fda13dde38cf544a = L.circleMarker(
+                [42.431, -8.6444],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.83331693749932, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_5b7ae7aa8739f73a2bf7e5201108c151 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ab8774f4c698b7b52dc18d09ac675ccf = $(`<div id="html_ab8774f4c698b7b52dc18d09ac675ccf" style="width: 100.0%; height: 100.0%;"><b>Pontevedra</b><br>Víctimas: 18</div>`)[0];
+                popup_5b7ae7aa8739f73a2bf7e5201108c151.setContent(html_ab8774f4c698b7b52dc18d09ac675ccf);
+            
+        
+
+        circle_marker_addf1168aaa0a974fda13dde38cf544a.bindPopup(popup_5b7ae7aa8739f73a2bf7e5201108c151)
+        ;
+
+        
+    
+    
+            circle_marker_addf1168aaa0a974fda13dde38cf544a.bindTooltip(
+                `<div>
+                     Pontevedra: 18 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_46f919ca8cec46d7b6dffd6c981bd144 = L.circleMarker(
+                [37.8882, -4.7794],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.917171988845775, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_abf3d120472a83f70b8235dfcaa1bcf4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_076e0386ef7a8f54b5cf299857bf5b95 = $(`<div id="html_076e0386ef7a8f54b5cf299857bf5b95" style="width: 100.0%; height: 100.0%;"><b>Córdoba</b><br>Víctimas: 13</div>`)[0];
+                popup_abf3d120472a83f70b8235dfcaa1bcf4.setContent(html_076e0386ef7a8f54b5cf299857bf5b95);
+            
+        
+
+        circle_marker_46f919ca8cec46d7b6dffd6c981bd144.bindPopup(popup_abf3d120472a83f70b8235dfcaa1bcf4)
+        ;
+
+        
+    
+    
+            circle_marker_46f919ca8cec46d7b6dffd6c981bd144.bindTooltip(
+                `<div>
+                     Córdoba: 13 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d39f0c16d402dd9173ad0a3fd576b2b1 = L.circleMarker(
+                [40.6566, -4.6818],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.694848072384611, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_402797acd129e090a96642e7dc74c345 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0832df7db5e1686c8ccdbfd5b6957d08 = $(`<div id="html_0832df7db5e1686c8ccdbfd5b6957d08" style="width: 100.0%; height: 100.0%;"><b>Ávila</b><br>Víctimas: 12</div>`)[0];
+                popup_402797acd129e090a96642e7dc74c345.setContent(html_0832df7db5e1686c8ccdbfd5b6957d08);
+            
+        
+
+        circle_marker_d39f0c16d402dd9173ad0a3fd576b2b1.bindPopup(popup_402797acd129e090a96642e7dc74c345)
+        ;
+
+        
+    
+    
+            circle_marker_d39f0c16d402dd9173ad0a3fd576b2b1.bindTooltip(
+                `<div>
+                     Ávila: 12 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b88ab09780f18a4708f0375772acedfb = L.circleMarker(
+                [37.9922, -1.1307],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.907755278982138, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_1888e0af9e29f2ca5d025bf313fed7ac = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3d61137b719ded3c4e1d585bbb04de98 = $(`<div id="html_3d61137b719ded3c4e1d585bbb04de98" style="width: 100.0%; height: 100.0%;"><b>Murcia</b><br>Víctimas: 9</div>`)[0];
+                popup_1888e0af9e29f2ca5d025bf313fed7ac.setContent(html_3d61137b719ded3c4e1d585bbb04de98);
+            
+        
+
+        circle_marker_b88ab09780f18a4708f0375772acedfb.bindPopup(popup_1888e0af9e29f2ca5d025bf313fed7ac)
+        ;
+
+        
+    
+    
+            circle_marker_b88ab09780f18a4708f0375772acedfb.bindTooltip(
+                `<div>
+                     Murcia: 9 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c45cba1e0f3856c51135ea778e7f7c2 = L.circleMarker(
+                [42.0096, -4.5288],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.907755278982138, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_65f666db5a7d3e091ceb1b8b6538b0ae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_281740b2e6e1f900aea8db279d7872d4 = $(`<div id="html_281740b2e6e1f900aea8db279d7872d4" style="width: 100.0%; height: 100.0%;"><b>Palencia</b><br>Víctimas: 9</div>`)[0];
+                popup_65f666db5a7d3e091ceb1b8b6538b0ae.setContent(html_281740b2e6e1f900aea8db279d7872d4);
+            
+        
+
+        circle_marker_3c45cba1e0f3856c51135ea778e7f7c2.bindPopup(popup_65f666db5a7d3e091ceb1b8b6538b0ae)
+        ;
+
+        
+    
+    
+            circle_marker_3c45cba1e0f3856c51135ea778e7f7c2.bindTooltip(
+                `<div>
+                     Palencia: 9 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e66ec37a2c98510e36ee6a6c0d7687cb = L.circleMarker(
+                [38.3452, -0.481],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.591673732008658, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_826916653f65e289763aef9ad0a64b45 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f955787603adf33063d13d9f2ec1706e = $(`<div id="html_f955787603adf33063d13d9f2ec1706e" style="width: 100.0%; height: 100.0%;"><b>Alicante/Alacant</b><br>Víctimas: 8</div>`)[0];
+                popup_826916653f65e289763aef9ad0a64b45.setContent(html_f955787603adf33063d13d9f2ec1706e);
+            
+        
+
+        circle_marker_e66ec37a2c98510e36ee6a6c0d7687cb.bindPopup(popup_826916653f65e289763aef9ad0a64b45)
+        ;
+
+        
+    
+    
+            circle_marker_e66ec37a2c98510e36ee6a6c0d7687cb.bindTooltip(
+                `<div>
+                     Alicante/Alacant: 8 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_42b10227fb24f2ac40440c329f409c1b = L.circleMarker(
+                [41.6523, -4.7245],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.591673732008658, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_1cbcb9c217116570646ee96c8ca994f4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5c9569bc45be381de107e51eb22639f9 = $(`<div id="html_5c9569bc45be381de107e51eb22639f9" style="width: 100.0%; height: 100.0%;"><b>Valladolid</b><br>Víctimas: 8</div>`)[0];
+                popup_1cbcb9c217116570646ee96c8ca994f4.setContent(html_5c9569bc45be381de107e51eb22639f9);
+            
+        
+
+        circle_marker_42b10227fb24f2ac40440c329f409c1b.bindPopup(popup_1cbcb9c217116570646ee96c8ca994f4)
+        ;
+
+        
+    
+    
+            circle_marker_42b10227fb24f2ac40440c329f409c1b.bindTooltip(
+                `<div>
+                     Valladolid: 8 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5d60b1335fac3915b4029f5ef5f5ecd = L.circleMarker(
+                [40.9701, -5.6635],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.375278407684165, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_5c94ee98b30c07aba6bc133977f39eab = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0af3f96a8a1fb38facf9560ae02e7f66 = $(`<div id="html_0af3f96a8a1fb38facf9560ae02e7f66" style="width: 100.0%; height: 100.0%;"><b>Salamanca</b><br>Víctimas: 5</div>`)[0];
+                popup_5c94ee98b30c07aba6bc133977f39eab.setContent(html_0af3f96a8a1fb38facf9560ae02e7f66);
+            
+        
+
+        circle_marker_d5d60b1335fac3915b4029f5ef5f5ecd.bindPopup(popup_5c94ee98b30c07aba6bc133977f39eab)
+        ;
+
+        
+    
+    
+            circle_marker_d5d60b1335fac3915b4029f5ef5f5ecd.bindTooltip(
+                `<div>
+                     Salamanca: 5 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dfddb66a4483d091c9b088d37e330a89 = L.circleMarker(
+                [37.2614, -6.9447],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.375278407684165, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_17ede36cef8a419936a6db5019df0fb4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_40b56dda0a428835c9dc5a3e05d3dfbc = $(`<div id="html_40b56dda0a428835c9dc5a3e05d3dfbc" style="width: 100.0%; height: 100.0%;"><b>Huelva</b><br>Víctimas: 5</div>`)[0];
+                popup_17ede36cef8a419936a6db5019df0fb4.setContent(html_40b56dda0a428835c9dc5a3e05d3dfbc);
+            
+        
+
+        circle_marker_dfddb66a4483d091c9b088d37e330a89.bindPopup(popup_17ede36cef8a419936a6db5019df0fb4)
+        ;
+
+        
+    
+    
+            circle_marker_dfddb66a4483d091c9b088d37e330a89.bindTooltip(
+                `<div>
+                     Huelva: 5 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_19e5f6f42665def11987e47d4974da40 = L.circleMarker(
+                [36.7213, -4.4213],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.828313737302301, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_c53d962950ac5e06b1d5b2fc797012e7 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_96aa6a91b32a68770ae564bdf96746e8 = $(`<div id="html_96aa6a91b32a68770ae564bdf96746e8" style="width: 100.0%; height: 100.0%;"><b>Málaga</b><br>Víctimas: 4</div>`)[0];
+                popup_c53d962950ac5e06b1d5b2fc797012e7.setContent(html_96aa6a91b32a68770ae564bdf96746e8);
+            
+        
+
+        circle_marker_19e5f6f42665def11987e47d4974da40.bindPopup(popup_c53d962950ac5e06b1d5b2fc797012e7)
+        ;
+
+        
+    
+    
+            circle_marker_19e5f6f42665def11987e47d4974da40.bindTooltip(
+                `<div>
+                     Málaga: 4 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4471cee5fbb6ae6b4556f581fd5f2da = L.circleMarker(
+                [38.9848, -3.9274],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.828313737302301, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_0c7481dff18d3782be512f87cd1100d2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b210ef85f64664923384313b27fe7e19 = $(`<div id="html_b210ef85f64664923384313b27fe7e19" style="width: 100.0%; height: 100.0%;"><b>Ciudad Real</b><br>Víctimas: 4</div>`)[0];
+                popup_0c7481dff18d3782be512f87cd1100d2.setContent(html_b210ef85f64664923384313b27fe7e19);
+            
+        
+
+        circle_marker_f4471cee5fbb6ae6b4556f581fd5f2da.bindPopup(popup_0c7481dff18d3782be512f87cd1100d2)
+        ;
+
+        
+    
+    
+            circle_marker_f4471cee5fbb6ae6b4556f581fd5f2da.bindTooltip(
+                `<div>
+                     Ciudad Real: 4 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6d89e8f27aaed2d182931c56256faa18 = L.circleMarker(
+                [42.3359, -7.8639],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_58ebdd9e0639dbd9531f9b3679013a16 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fa4b5fd49b5f9383ed65b3d4f71a9d65 = $(`<div id="html_fa4b5fd49b5f9383ed65b3d4f71a9d65" style="width: 100.0%; height: 100.0%;"><b>Ourense</b><br>Víctimas: 3</div>`)[0];
+                popup_58ebdd9e0639dbd9531f9b3679013a16.setContent(html_fa4b5fd49b5f9383ed65b3d4f71a9d65);
+            
+        
+
+        circle_marker_6d89e8f27aaed2d182931c56256faa18.bindPopup(popup_58ebdd9e0639dbd9531f9b3679013a16)
+        ;
+
+        
+    
+    
+            circle_marker_6d89e8f27aaed2d182931c56256faa18.bindTooltip(
+                `<div>
+                     Ourense: 3 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a1dbf647fffb2d79ca7380856c77194b = L.circleMarker(
+                [38.9942, -1.8564],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_5997250921d940535ee014af049325bb = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1643c7ce6121a238eb5a03320c1807cd = $(`<div id="html_1643c7ce6121a238eb5a03320c1807cd" style="width: 100.0%; height: 100.0%;"><b>Albacete</b><br>Víctimas: 3</div>`)[0];
+                popup_5997250921d940535ee014af049325bb.setContent(html_1643c7ce6121a238eb5a03320c1807cd);
+            
+        
+
+        circle_marker_a1dbf647fffb2d79ca7380856c77194b.bindPopup(popup_5997250921d940535ee014af049325bb)
+        ;
+
+        
+    
+    
+            circle_marker_a1dbf647fffb2d79ca7380856c77194b.bindTooltip(
+                `<div>
+                     Albacete: 3 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_524eac6c2d63f3fa6de428f2c7b875e5 = L.circleMarker(
+                [37.1773, -3.5986],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_b502cc3ce192abe7f1962a94c1e5afe5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2b409ebb6f485bee41f08ba5ace10d40 = $(`<div id="html_2b409ebb6f485bee41f08ba5ace10d40" style="width: 100.0%; height: 100.0%;"><b>Granada</b><br>Víctimas: 3</div>`)[0];
+                popup_b502cc3ce192abe7f1962a94c1e5afe5.setContent(html_2b409ebb6f485bee41f08ba5ace10d40);
+            
+        
+
+        circle_marker_524eac6c2d63f3fa6de428f2c7b875e5.bindPopup(popup_b502cc3ce192abe7f1962a94c1e5afe5)
+        ;
+
+        
+    
+    
+            circle_marker_524eac6c2d63f3fa6de428f2c7b875e5.bindTooltip(
+                `<div>
+                     Granada: 3 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_99c16448d46caa2b2c31c8b994056e90 = L.circleMarker(
+                [41.764, -2.479],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_e543d6827158a8a411c21f8821c17eb8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b097ce6a69eeb5aea7e3dc11e5428066 = $(`<div id="html_b097ce6a69eeb5aea7e3dc11e5428066" style="width: 100.0%; height: 100.0%;"><b>Soria</b><br>Víctimas: 2</div>`)[0];
+                popup_e543d6827158a8a411c21f8821c17eb8.setContent(html_b097ce6a69eeb5aea7e3dc11e5428066);
+            
+        
+
+        circle_marker_99c16448d46caa2b2c31c8b994056e90.bindPopup(popup_e543d6827158a8a411c21f8821c17eb8)
+        ;
+
+        
+    
+    
+            circle_marker_99c16448d46caa2b2c31c8b994056e90.bindTooltip(
+                `<div>
+                     Soria: 2 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_77b7908fb32379b8cefe071cbac99a8f = L.circleMarker(
+                [37.7796, -3.7849],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_545529c64b37dab3c7812937d5e2e032 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_732781e63a5342377a60f2a635294aab = $(`<div id="html_732781e63a5342377a60f2a635294aab" style="width: 100.0%; height: 100.0%;"><b>Jaén</b><br>Víctimas: 2</div>`)[0];
+                popup_545529c64b37dab3c7812937d5e2e032.setContent(html_732781e63a5342377a60f2a635294aab);
+            
+        
+
+        circle_marker_77b7908fb32379b8cefe071cbac99a8f.bindPopup(popup_545529c64b37dab3c7812937d5e2e032)
+        ;
+
+        
+    
+    
+            circle_marker_77b7908fb32379b8cefe071cbac99a8f.bindTooltip(
+                `<div>
+                     Jaén: 2 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_919154abb21f3bb346ba81873f4c5eea = L.circleMarker(
+                [43.0097, -7.5567],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_5b1c0f67ab20ee96f797ea55ec1fa227);
+        
+    
+        var popup_50fd6e7752f43a7b3abd7ce2e1d36343 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_24d28626e7163b80a843883757d44559 = $(`<div id="html_24d28626e7163b80a843883757d44559" style="width: 100.0%; height: 100.0%;"><b>Lugo</b><br>Víctimas: 1</div>`)[0];
+                popup_50fd6e7752f43a7b3abd7ce2e1d36343.setContent(html_24d28626e7163b80a843883757d44559);
+            
+        
+
+        circle_marker_919154abb21f3bb346ba81873f4c5eea.bindPopup(popup_50fd6e7752f43a7b3abd7ce2e1d36343)
+        ;
+
+        
+    
+    
+            circle_marker_919154abb21f3bb346ba81873f4c5eea.bindTooltip(
+                `<div>
+                     Lugo: 1 víctimas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
