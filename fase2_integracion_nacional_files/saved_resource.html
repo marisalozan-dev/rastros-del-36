@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css">
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <style>
+                #map_b888fb89bf5615894bda7c50133b804c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+     z-index: 1000; background-color: white; padding: 10px 20px;
+     border-radius: 8px; border: 2px solid #d73027;
+     font-family: Arial; font-size: 14px; font-weight: bold; text-align: center;">
+     🗺️ Rastros del 36 · Fosas comunes en Andalucía<br>
+     <span style="font-size:11px; font-weight:normal;">
+     Fuente: Junta de Andalucía | Tamaño proporcional al nº de víctimas</span>
+</div>
+    
+            <div class="folium-map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" id="map_b888fb89bf5615894bda7c50133b804c" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 20; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/7/62/49.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(360px, 124px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/7/62/48.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(360px, -132px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/7/61/49.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(104px, 124px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/7/63/49.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(616px, 124px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/7/62/50.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(360px, 380px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/7/61/48.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(104px, -132px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/7/63/48.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(616px, -132px, 0px); opacity: 1;"><img alt="" src="https://d.basemaps.cartocdn.com/light_all/7/61/50.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(104px, 380px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/7/63/50.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(616px, 380px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/7/60/49.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-152px, 124px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/7/64/49.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(872px, 124px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/7/60/48.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-152px, -132px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/7/64/48.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(872px, -132px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/7/60/50.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-152px, 380px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/7/64/50.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(872px, 380px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1110" height="666" viewBox="-92 -55 1110 666" style="transform: translate3d(-92px, -55px, 0px);"><g><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M516,314a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0 "></path><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M212,304a28,28 0 1,0 56,0 a28,28 0 1,0 -56,0 "></path><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M300,290a27,27 0 1,0 54,0 a27,27 0 1,0 -54,0 "></path><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M443,366a27,27 0 1,0 54,0 a27,27 0 1,0 -54,0 "></path><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M411,232a26,26 0 1,0 52,0 a26,26 0 1,0 -52,0 " aria-describedby="leaflet-tooltip-82"></path><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M504,245a23,23 0 1,0 46,0 a23,23 0 1,0 -46,0 " aria-describedby="leaflet-tooltip-87"></path><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M279,388a21,21 0 1,0 42,0 a21,21 0 1,0 -42,0 "></path><path class="leaflet-interactive" stroke="#d73027" stroke-opacity="1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="#d73027" fill-opacity="0.6" fill-rule="evenodd" d="M630,353a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0 "></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://localhost:8888/notebooks/Rastros_del_36%2Ffase2_integracion_nacional.ipynb#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="http://localhost:8888/notebooks/Rastros_del_36%2Ffase2_integracion_nacional.ipynb#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a></div></div></div></div>
+        
+
+<script>
+    
+    
+            var map_b888fb89bf5615894bda7c50133b804c = L.map(
+                "map_b888fb89bf5615894bda7c50133b804c",
+                {
+                    center: [37.5, -4.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_276d2e3cea87ce239f3310432ff412e2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_276d2e3cea87ce239f3310432ff412e2.addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+            var circle_marker_899866905152cd85464a06654e92a0c8 = L.circleMarker(
+                [37.1773, -3.5986],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.884044561229803, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_22ddf67c3011915171198fb168130aba = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b8381f42791b4ae7c96cc55597e7644e = $(`<div id="html_b8381f42791b4ae7c96cc55597e7644e" style="width: 100.0%; height: 100.0%;"><b>Granada</b><br>Víctimas: 10,879<br>Fosas: 65<br>Media: 167.4 víctimas/fosa</div>`)[0];
+                popup_22ddf67c3011915171198fb168130aba.setContent(html_b8381f42791b4ae7c96cc55597e7644e);
+            
+        
+
+        circle_marker_899866905152cd85464a06654e92a0c8.bindPopup(popup_22ddf67c3011915171198fb168130aba)
+        ;
+
+        
+    
+    
+            circle_marker_899866905152cd85464a06654e92a0c8.bindTooltip(
+                `<div>
+                     Granada: 10,879 víctimas en 65 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bed15395ecf899006d593846c10f5018 = L.circleMarker(
+                [37.2614, -6.9447],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.748683255388393, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_c69eaaac28a2be1ccd5a23bbb37e0bd2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a85401aa891a264ab10675bdde7f1917 = $(`<div id="html_a85401aa891a264ab10675bdde7f1917" style="width: 100.0%; height: 100.0%;"><b>Huelva</b><br>Víctimas: 10,399<br>Fosas: 86<br>Media: 120.9 víctimas/fosa</div>`)[0];
+                popup_c69eaaac28a2be1ccd5a23bbb37e0bd2.setContent(html_a85401aa891a264ab10675bdde7f1917);
+            
+        
+
+        circle_marker_bed15395ecf899006d593846c10f5018.bindPopup(popup_c69eaaac28a2be1ccd5a23bbb37e0bd2)
+        ;
+
+        
+    
+    
+            circle_marker_bed15395ecf899006d593846c10f5018.bindTooltip(
+                `<div>
+                     Huelva: 10,399 víctimas en 86 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_23cf1c573701594a970f7b5628ed05e2 = L.circleMarker(
+                [37.3891, -5.9845],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.26485717790663, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_7bba5835b39bfc6d929bfe7621878970 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_de72d91fcf1b3c38e76d709ba9a325c0 = $(`<div id="html_de72d91fcf1b3c38e76d709ba9a325c0" style="width: 100.0%; height: 100.0%;"><b>Sevilla</b><br>Víctimas: 8,850<br>Fosas: 81<br>Media: 109.3 víctimas/fosa</div>`)[0];
+                popup_7bba5835b39bfc6d929bfe7621878970.setContent(html_de72d91fcf1b3c38e76d709ba9a325c0);
+            
+        
+
+        circle_marker_23cf1c573701594a970f7b5628ed05e2.bindPopup(popup_7bba5835b39bfc6d929bfe7621878970)
+        ;
+
+        
+    
+    
+            circle_marker_23cf1c573701594a970f7b5628ed05e2.bindTooltip(
+                `<div>
+                     Sevilla: 8,850 víctimas en 81 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_45890ae7fa54e676da1f2e212d4fc52f = L.circleMarker(
+                [36.7213, -4.4213],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.832476492911212, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_f0ac2a095034a6f996d64169946686b2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8336211095c24c0c3eceb025eded7720 = $(`<div id="html_8336211095c24c0c3eceb025eded7720" style="width: 100.0%; height: 100.0%;"><b>Málaga</b><br>Víctimas: 7,662<br>Fosas: 69<br>Media: 111.0 víctimas/fosa</div>`)[0];
+                popup_f0ac2a095034a6f996d64169946686b2.setContent(html_8336211095c24c0c3eceb025eded7720);
+            
+        
+
+        circle_marker_45890ae7fa54e676da1f2e212d4fc52f.bindPopup(popup_f0ac2a095034a6f996d64169946686b2)
+        ;
+
+        
+    
+    
+            circle_marker_45890ae7fa54e676da1f2e212d4fc52f.bindTooltip(
+                `<div>
+                     Málaga: 7,662 víctimas en 69 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50588ba89252552afc56e16e75cefc70 = L.circleMarker(
+                [37.8882, -4.7794],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.78023965198294, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_e6d3838b32da2993bcc389c72987561b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_97f64140d0c59f99327e4e16703df172 = $(`<div id="html_97f64140d0c59f99327e4e16703df172" style="width: 100.0%; height: 100.0%;"><b>Córdoba</b><br>Víctimas: 5,395<br>Fosas: 68<br>Media: 79.3 víctimas/fosa</div>`)[0];
+                popup_e6d3838b32da2993bcc389c72987561b.setContent(html_97f64140d0c59f99327e4e16703df172);
+            
+        
+
+        circle_marker_50588ba89252552afc56e16e75cefc70.bindPopup(popup_e6d3838b32da2993bcc389c72987561b)
+        ;
+
+        
+    
+    
+            circle_marker_50588ba89252552afc56e16e75cefc70.bindTooltip(
+                `<div>
+                     Córdoba: 5,395 víctimas en 68 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_25388f7455bc173dd72a1c7b3da09f3f = L.circleMarker(
+                [37.7796, -3.7849],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.817670003159364, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_07226729f763516f20d9e28193cca61e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_159ab43fe6e5a4a579348fe4829a2a1e = $(`<div id="html_159ab43fe6e5a4a579348fe4829a2a1e" style="width: 100.0%; height: 100.0%;"><b>Jaén</b><br>Víctimas: 2,009<br>Fosas: 24<br>Media: 83.7 víctimas/fosa</div>`)[0];
+                popup_07226729f763516f20d9e28193cca61e.setContent(html_159ab43fe6e5a4a579348fe4829a2a1e);
+            
+        
+
+        circle_marker_25388f7455bc173dd72a1c7b3da09f3f.bindPopup(popup_07226729f763516f20d9e28193cca61e)
+        ;
+
+        
+    
+    
+            circle_marker_25388f7455bc173dd72a1c7b3da09f3f.bindTooltip(
+                `<div>
+                     Jaén: 2,009 víctimas en 24 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4f3e4c11160bcaa2b8a98d25f67aa3f = L.circleMarker(
+                [36.5271, -6.2886],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.454456391714206, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_11eb884d56f2599767ab831b6b593d1a = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f4ae980d9f25092ae7f84d0502277bc9 = $(`<div id="html_f4ae980d9f25092ae7f84d0502277bc9" style="width: 100.0%; height: 100.0%;"><b>Cádiz</b><br>Víctimas: 1,275<br>Fosas: 57<br>Media: 22.4 víctimas/fosa</div>`)[0];
+                popup_11eb884d56f2599767ab831b6b593d1a.setContent(html_f4ae980d9f25092ae7f84d0502277bc9);
+            
+        
+
+        circle_marker_f4f3e4c11160bcaa2b8a98d25f67aa3f.bindPopup(popup_11eb884d56f2599767ab831b6b593d1a)
+        ;
+
+        
+    
+    
+            circle_marker_f4f3e4c11160bcaa2b8a98d25f67aa3f.bindTooltip(
+                `<div>
+                     Cádiz: 1,275 víctimas en 57 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1b4162c93ba5a9cccffe866aab6c41c9 = L.circleMarker(
+                [36.834, -2.4637],
+                {"bubblingMouseEvents": true, "color": "#d73027", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d73027", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.66663387499864, "stroke": true, "weight": 3}
+            ).addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+    
+        var popup_2083f42267eb4eb8d4a130c3fd835bae = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0feb0b6a7a0c220f42f7e1eb719128fe = $(`<div id="html_0feb0b6a7a0c220f42f7e1eb719128fe" style="width: 100.0%; height: 100.0%;"><b>Almería</b><br>Víctimas: 360<br>Fosas: 8<br>Media: 45.0 víctimas/fosa</div>`)[0];
+                popup_2083f42267eb4eb8d4a130c3fd835bae.setContent(html_0feb0b6a7a0c220f42f7e1eb719128fe);
+            
+        
+
+        circle_marker_1b4162c93ba5a9cccffe866aab6c41c9.bindPopup(popup_2083f42267eb4eb8d4a130c3fd835bae)
+        ;
+
+        
+    
+    
+            circle_marker_1b4162c93ba5a9cccffe866aab6c41c9.bindTooltip(
+                `<div>
+                     Almería: 360 víctimas en 8 fosas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            tile_layer_276d2e3cea87ce239f3310432ff412e2.addTo(map_b888fb89bf5615894bda7c50133b804c);
+        
+</script>
+</body></html>
