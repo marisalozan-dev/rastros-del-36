@@ -26,13 +26,16 @@ en el País Vasco, a partir del dataset de Open Data Euskadi.
 | `fase1_victimas_euskadi.ipynb` | Notebook completo con análisis y visualizaciones |
 | `mapa_victimas_euskadi.html` | Mapa interactivo de fallecimientos por provincia |
 | `victimas_guerra_civil.xlsx` | Dataset original — Open Data Euskadi |
-
+| `fase2_integracion_nacional.ipynb` | Integración Euskadi + Andalucía. Mapa nacional combinado |
+| `mapa_fosas_andalucia.html` | Mapa interactivo de fosas en Andalucía |
+| `mapa_nacional_fase2.html` | Mapa nacional combinado Euskadi + Andalucía |
+| `mapa_fosas_victimas_guerra_civil_andalucia.csv` | Dataset fosas Andalucía — Junta de Andalucía |
 ---
 
 ## 🗺️ Hoja de ruta del proyecto
 
 - [x] **Fase 1** · Análisis de víctimas en Euskadi
-- [ ] **Fase 2** · Incorporación de otras comunidades autónomas
+- [x] **Fase 2** · Integración Andalucía y mapa nacional
 - [ ] **Fase 3** · Cruce con registros del exilio republicano
 - [ ] **Fase 4** · Modelo de datos relacional y grafo de conocimiento
 - [ ] **Fase 5** · Plataforma pública con buscador y visualizaciones
