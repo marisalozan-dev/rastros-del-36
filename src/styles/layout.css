@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background: #111;
+  color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.map-section {
+  height: 80vh;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.board-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
