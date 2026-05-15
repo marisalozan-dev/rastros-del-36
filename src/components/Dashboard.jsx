@@ -1,4 +1,4 @@
 function Dashboard() {
-  return <Dashboard><h1>Rastros del 36</h1></Dashboard>;
+  return <dashboard><h1>Rastros del 36</h1></dashboard>;
 }
 export default Dashboard;
