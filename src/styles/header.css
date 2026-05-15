@@ -1,0 +1,56 @@
+.header-container {
+  background: radial-gradient(circle at top left, #2b2b2b, #111);
+  color: #f5f5f5;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.header-title {
+  font-family: 'Merriweather', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+
+.header-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #b22222;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #8b1a1a;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid #b22222;
+  color: #b22222;
+}
+
+.btn.secondary:hover {
+  background-color: #b22222;
+  color: #fff;
+}
