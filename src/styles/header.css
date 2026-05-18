@@ -1,5 +1,5 @@
 .header-container {
-  background: radial-gradient(circle at top left, #2b2b2b, #111);
+  background: #111; /* fondo sólido oscuro */
   color: #f5f5f5;
   padding: 3rem 2rem;
   text-align: center;
@@ -54,3 +54,4 @@
   background-color: #b22222;
   color: #fff;
 }
+
